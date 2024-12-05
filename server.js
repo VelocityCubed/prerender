@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var prerender = require('./lib');
 
-var server = prerender();
+var server = prerender({chromeLocation:'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'});
 
 server.use(prerender.sendPrerenderHeader());
 server.use(prerender.browserForceRestart());
